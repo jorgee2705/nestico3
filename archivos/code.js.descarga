@@ -1,0 +1,64 @@
+//Fondo - home
+$(function(){
+$.fn.supersized.options = {
+	startwidth: 700,
+	startheight: 394,
+	vertical_center: 1,
+	slideshow: 1,
+	navigation: 0,
+	thumbnail_navigation: 0,
+	transition: 1, //0-None, 1-Fade, 2-slide top, 3-slide right, 4-slide bottom, 5-slide left
+	pause_hover: 0,
+	slide_counter: 0,
+	slide_captions: 0,
+	slide_interval: 8000,
+	slides : [
+		{image : 'img/slides/1.jpg', title : '1'},
+		{image : 'img/slides/2.jpg', title : '2'},
+		{image : 'img/slides/3.jpg', title : '3'},
+		{image : 'img/slides/4.jpg', title : '4'},
+		{image : 'img/slides/5.jpg', title : '5'}
+	]
+};
+    $('#supersized').supersized();
+});
+//
+$(function(){
+	$.stellar({
+		horizontalScrolling: false,
+		verticalOffset: 40
+	});
+});
+//
+$(function() {
+	$(".rslides").responsiveSlides();
+});
+//
+$(document).ready(function() {
+		/*
+		 *  Simple image gallery. Uses default settings
+		 */
+		$('.fancybox').fancybox();
+		/*
+		 *  Different effects
+		 */
+		// Change title type, overlay closing speed
+		$(".fancybox-effects-a").fancybox({
+			helpers: {
+				title : {
+					type : 'outside'
+				},
+				overlay : {
+					speedOut : 0
+				}
+			}
+		});
+	});
+//
+$(function() {
+  $( "#tabs" ).tabs();
+});
+
+$(window).load(function(){
+  $('#promo').modal('show');
+});
